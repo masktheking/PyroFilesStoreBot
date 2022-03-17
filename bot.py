@@ -355,10 +355,10 @@ async def button(bot: Client, cmd: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("Support Group", url="https://t.me/JoinOT"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
-                    ],
+                    
+                     
+                        
+                    
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
                         InlineKeyboardButton("About Dev", callback_data="aboutdevs")
