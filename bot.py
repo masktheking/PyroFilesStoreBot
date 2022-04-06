@@ -107,7 +107,7 @@ async def start(bot: Client, cmd: Message):
             await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
 
-@Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.edited & ~filters.chat(Config.DB_CHANNEL) & filters.user(Config.BOT_OWNER))
+@Bot.on_message(filters.user(Config.BOT_OWNER)  & (filters.document | filters.video | filters.audio) & ~filters.edited & ~filters.chat(Config.DB_CHANNEL))
 async def main(bot: Client, message: Message):
 
     if message.chat.type == "private":
