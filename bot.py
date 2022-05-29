@@ -1,6 +1,7 @@
 # (c) @AbirHasan2005
 
 import os
+import logging
 import asyncio
 import traceback
 from binascii import (
@@ -35,6 +36,10 @@ from handlers.broadcast_handlers import main_broadcast_handler
 from handlers.save_media import (
     save_media_in_channel,
     save_batch_media_in_channel
+)
+
+logging.basicConfig(
+    format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
 MediaList = {}
